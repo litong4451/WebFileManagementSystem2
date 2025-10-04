@@ -1,0 +1,446 @@
+/* 应用整体布局 */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 应用头部 */
+.app-header {
+  background-color: #242424;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* 主内容区域 */
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 认证组件样式 */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.auth-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #242424;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #242424;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.auth-form button[type="submit"] {
+  width: 100%;
+  background-color: #646cff;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-form button[type="submit"]:hover:not(:disabled) {
+  background-color: #535bf2;
+}
+
+.auth-form button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.toggle-btn {
+  width: 100%;
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  color: #646cff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* 文件管理器样式 */
+.file-manager {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 顶部导航栏 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.path-section {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.path-navigation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.path-navigation button {
+  background: none;
+  border: none;
+  color: #646cff;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 4px;
+  font-size: 1rem;
+}
+
+.path-navigation button:hover {
+  text-decoration: underline;
+}
+
+.path-navigation button.active {
+  color: #242424;
+  font-weight: bold;
+  cursor: default;
+  text-decoration: none;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #ff5252;
+}
+
+/* 工具栏 */
+.toolbar {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+
+.toolbar button {
+  background-color: #646cff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toolbar button:hover:not(:disabled) {
+  background-color: #535bf2;
+}
+
+.toolbar button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.upload-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.upload-btn:hover {
+  background-color: #218838;
+}
+
+/* 文件列表 */
+.file-list {
+  padding: 1rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.file-item:hover {
+  background-color: #f5f5f5;
+}
+
+.item-icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.item-name {
+  flex: 1;
+}
+
+.folder-name {
+  background: none;
+  border: none;
+  color: #646cff;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.folder-name:hover {
+  text-decoration: underline;
+}
+
+.item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.item-actions button {
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+/* 下载按钮 */
+.item-actions button:first-child {
+  background-color: #4285f4;
+  color: white;
+}
+
+.item-actions button:first-child:hover {
+  background-color: #3367d6;
+}
+
+/* 重命名按钮 */
+.item-actions button:nth-child(2) {
+  background-color: #fbbc05;
+  color: white;
+}
+
+.item-actions button:nth-child(2):hover {
+  background-color: #e3a204;
+}
+
+/* 移动按钮 */
+.item-actions button:nth-child(3),
+.item-actions button:nth-child(4):not(:last-child) {
+  background-color: #34a853;
+  color: white;
+}
+
+.item-actions button:nth-child(3):hover,
+.item-actions button:nth-child(4):not(:last-child):hover {
+  background-color: #2d9348;
+}
+
+/* 共享按钮 */
+.item-actions button:nth-child(4) {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.item-actions button:nth-child(4):hover {
+  background-color: #1557b0;
+}
+
+/* 删除按钮 */
+.item-actions button:last-child {
+  background-color: #ea4335;
+  color: white;
+}
+
+.item-actions button:last-child:hover {
+  background-color: #c53929;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.empty-folder {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* 模态框样式 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #242424;
+  font-weight: 500;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.modal-actions button:first-child {
+  background-color: #ddd;
+  color: #333;
+}
+
+.modal-actions button:last-child {
+  background-color: #646cff;
+  color: white;
+}
+
+/* 错误信息 */
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 1rem 2rem;
+  border-left: 4px solid #c62828;
+  margin: 1rem 2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .app-main {
+    padding: 1rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .toolbar {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  .file-item {
+    flex-wrap: wrap;
+  }
+  
+  .item-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
+}
